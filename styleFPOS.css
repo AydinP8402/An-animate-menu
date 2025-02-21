@@ -1,0 +1,209 @@
+/* css codes */
+
+/* menu codes */
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+}
+
+/* . Main Navigation Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #1f1f2f;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.navbar ul li a:hover {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(255, 75, 43, 0.5);
+    transform: scale(1.1);
+}
+
+.navbar ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #ff416c;
+    transition: width 0.4s ease;
+}
+
+.navbar ul li a:hover::before {
+    width: 100%;
+}
+
+.navbar .cta {
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.navbar .cta:hover {
+    background: linear-gradient(to left, #ff416c, #ff4b2b);
+    box-shadow: 0 6px 20px rgba(255, 75, 43, 0.5);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        display: none;
+        width: 100%;
+        background: #1f1f2f;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar ul.active {
+        display: flex;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* body codes */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  
+  header {
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+  }
+  
+  .scroll-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+  }
+  
+  .box {
+    width: 100px;
+    height: 100px;
+    background: #ff4e50;
+    border-radius: 10px;
+  }
+  
+  .hover-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6a11cb;
+  }
+  
+  .hover-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background: #ffffff;
+    border: 2px solid #6a11cb;
+    color: #6a11cb;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Make the transition smoother */
+}
+
+/* .hover-button:hover {
+    transform: scale(1.8); // Only scale on hover
+} */
+
+  .mouse-section {
+    height: 100vh;
+    background: #2575fc;
+    position: relative;
+  }
+  
+  .circle {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    color: white;
+  }
